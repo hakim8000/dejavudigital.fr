@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Dejavu Digital — Cabinet de conseil en obtention de subventions. 4 associations accompagnées, subventions obtenues à tous les niveaux : mairie, département, région, ANS, fondations privées.">
+    <title>Dejavu Digital | Cabinet de Conseil en Subventions pour Associations</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo" id="logo">
+                <div class="logo-mark">D</div>
+                <span class="logo-text">Dejavu Digital</span>
+            </a>
+            <nav class="desktop-nav" id="desktop-nav">
+                <a href="#resultats">Résultats</a>
+                <a href="#methode">Notre méthode</a>
+                <a href="#tarifs">Tarifs</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <a href="#contact" class="btn btn-nav" id="nav-cta">Diagnostic gratuit</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#resultats">Résultats</a>
+            <a href="#methode">Notre méthode</a>
+            <a href="#tarifs">Tarifs</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact" class="btn btn-primary">Diagnostic gratuit</a>
+        </div>
+    </header>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="grid-pattern"></div>
+        </div>
+
+        <div class="container hero-content">
+            <div class="reveal">
+                <div class="badge">4 associations accompagnées · Subventions obtenues à tous les niveaux</div>
+            </div>
+            <h1 class="reveal delay-1">
+                Vos subventions existent.<br>
+                <span class="gradient-text">On les obtient pour vous.</span>
+            </h1>
+            <p class="hero-sub reveal delay-2">
+                Depuis 2024, nous accompagnons des associations en France — sport, culture, humanitaire, social — et nous leur avons obtenu des subventions <strong>à chaque niveau</strong> : mairie, département, région, ANS, et même des fondations privées comme le Crédit Agricole. <strong>Pas de résultat = pas d'honoraires.</strong>
+            </p>
+            <div class="hero-actions reveal delay-3">
+                <a href="#contact" class="btn btn-primary btn-lg" id="hero-cta">
+                    Diagnostic de faisabilité
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <span class="hero-hint">Gratuit · 15 minutes · Sans engagement</span>
+            </div>
+
+            <div class="hero-stats reveal delay-4">
+                <div class="stat-item">
+                    <span class="stat-label">Associations accompagnées</span>
+                    <span class="stat-value">4 depuis 2024</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">Niveaux de financement</span>
+                    <span class="stat-value">Commune → Région → État → Privé</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">Modèle</span>
+                    <span class="stat-value">0 € d'avance · 15% au résultat</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CONSTAT ═══════════════ -->
+    <section class="constat" id="constat">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Le constat</span>
+                <h2>Des financements existent.<br><span class="gradient-text">Personne ne les demande.</span></h2>
+            </div>
+
+            <div class="pain-grid">
+                <div class="pain-card reveal delay-1" id="pain-1">
+                    <div class="pain-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3>Le temps manque</h3>
+                    <p>Présidents bénévoles, vous gérez déjà les entraînements, les licences, la comptabilité. Monter un
+                        dossier de subvention prend des dizaines d'heures.</p>
+                </div>
+                <div class="pain-card reveal delay-2" id="pain-2">
+                    <div class="pain-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </div>
+                    <h3>Les dispositifs sont complexes</h3>
+                    <p>FDVA, ANS, PSF, CNDS, appels à projets régionaux… Chaque financeur a ses propres formulaires,
+                        calendriers et critères d'éligibilité.</p>
+                </div>
+                <div class="pain-card reveal delay-3" id="pain-3">
+                    <div class="pain-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                    </div>
+                    <h3>L'argent n'est pas réclamé</h3>
+                    <p>Des milliers d'euros de financements publics dorment chaque année, faute de dossiers déposés dans
+                        les temps. Votre association y a peut-être droit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ TRACK RECORD ═══════════════ -->
+    <section class="track-record" id="resultats">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Nos résultats</span>
+                <h2>4 associations accompagnées.<br><span class="gradient-text">Des subventions obtenues.</span></h2>
+                <p class="section-sub">Depuis 2024, nous accompagnons des associations dans toute la France. Voici ce qu'on a obtenu pour elles.</p>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card reveal delay-1" id="result-1">
+                    <div class="result-icon">🥋</div>
+                    <h3>Lutte Grappling Academy</h3>
+                    <p class="result-sector">Sport — Lutte & Grappling · Hauts-de-France</p>
+                    <div class="result-tags">
+                        <span class="tag tag-green">✓ Municipale</span>
+                        <span class="tag tag-green">✓ Départementale</span>
+                        <span class="tag tag-green">✓ Régionale</span>
+                        <span class="tag tag-green">✓ ANS (PSF)</span>
+                        <span class="tag tag-green">✓ FDVA</span>
+                    </div>
+                    <p class="result-detail">Subventions obtenues sur 3 exercices (2024, 2025, 2026)</p>
+                </div>
+
+                <div class="result-card reveal delay-2" id="result-2">
+                    <div class="result-icon">🤼</div>
+                    <h3>Wrestling Club Venizel</h3>
+                    <p class="result-sector">Sport — Lutte olympique · Aisne (02)</p>
+                    <div class="result-tags">
+                        <span class="tag tag-green">✓ Municipale</span>
+                        <span class="tag tag-green">✓ Départementale</span>
+                        <span class="tag tag-green">✓ Régionale</span>
+                        <span class="tag tag-green">✓ ANS (PSF)</span>
+                        <span class="tag tag-green">✓ FDVA</span>
+                    </div>
+                    <p class="result-detail">Dossiers FFL et ANS PSF maîtrisés — 3 exercices</p>
+                </div>
+
+                <div class="result-card reveal delay-3" id="result-3">
+                    <div class="result-icon">🌍</div>
+                    <h3>ADEFRAM Picardie</h3>
+                    <p class="result-sector">Culture & Social · Hauts-de-France</p>
+                    <div class="result-tags">
+                        <span class="tag tag-green">✓ Municipale</span>
+                        <span class="tag tag-green">✓ Départementale</span>
+                        <span class="tag tag-green">✓ Régionale</span>
+                        <span class="tag tag-green">✓ FDVA</span>
+                        <span class="tag tag-gold">★ Fondation Crédit Agricole</span>
+                    </div>
+                    <p class="result-detail">Subvention privée Fondation du Crédit Agricole obtenue en 2025</p>
+                </div>
+
+                <div class="result-card reveal delay-4" id="result-4">
+                    <div class="result-icon">🚑</div>
+                    <h3>Mobility Humanitaire</h3>
+                    <p class="result-sector">Humanitaire & Social · France</p>
+                    <div class="result-tags">
+                        <span class="tag tag-green">✓ Municipale</span>
+                        <span class="tag tag-green">✓ Départementale</span>
+                        <span class="tag tag-green">✓ Régionale</span>
+                        <span class="tag tag-green">✓ FDVA</span>
+                        <span class="tag tag-blue">★ Agrément Service Civique</span>
+                        <span class="tag tag-gold">★ FONJEP</span>
+                    </div>
+                    <p class="result-detail">Agrément Service Civique obtenu — volontaires financés par l'État</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ TÉMOIGNAGES ═══════════════ -->
+    <section class="testimonials" id="temoignages">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Ils nous font confiance</span>
+                <h2>Ce que disent<br><span class="gradient-text">nos associations.</span></h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal delay-1" id="testimonial-1">
+                    <div class="testimonial-quote">"</div>
+                    <p>On n'avait jamais déposé de dossier ANS nous-mêmes — trop compliqué, pas le temps. Dejavu Digital a tout pris en charge de A à Z : formulaires, budget prévisionnel, dépôt sur Le Compte Asso. On a reçu la subvention sans avoir touché à un seul papier.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">🥋</div>
+                        <div>
+                            <strong>Président — Lutte Grappling Academy</strong>
+                            <span>Club de lutte · Hauts-de-France</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal delay-2" id="testimonial-2">
+                    <div class="testimonial-quote">"</div>
+                    <p>On pensait que les fondations privées, c'était réservé aux grosses structures parisiennes. Ils nous ont décroché une subvention de la Fondation du Crédit Agricole. On n'aurait jamais pensé à les contacter nous-mêmes.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">🌍</div>
+                        <div>
+                            <strong>Présidente — ADEFRAM Picardie</strong>
+                            <span>Association culturelle & sociale · Hauts-de-France</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal delay-3" id="testimonial-3">
+                    <div class="testimonial-quote">"</div>
+                    <p>En plus des subventions classiques, ils nous ont obtenu l'agrément Service Civique. Résultat : on accueille maintenant des jeunes volontaires financés par l'État. Ça change tout pour une petite association comme la nôtre.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">🚑</div>
+                        <div>
+                            <strong>Président — Mobility Humanitaire</strong>
+                            <span>Association humanitaire · France</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ MÉTHODE ═══════════════ -->
+    <section class="methode" id="methode">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Notre méthode</span>
+                <h2>Un accompagnement<br><span class="gradient-text">clé-en-main.</span></h2>
+                <p class="section-sub">Vous restez décisionnaire à chaque étape. Nous nous occupons de tout le reste.
+                </p>
+            </div>
+
+            <div class="steps-timeline">
+                <div class="step-card reveal delay-1" id="step-1">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Diagnostic de votre structure</h3>
+                        <p>Nous analysons votre association ou entreprise : activités, projets en cours, historique de
+                            financement. Nous cartographions les dispositifs d'aides publiques (communales,
+                            départementales, régionales, nationales) auxquels vous êtes éligible.</p>
+                        <div class="step-tag">Gratuit · 15 min en visio</div>
+                    </div>
+                </div>
+
+                <div class="step-card reveal delay-2" id="step-2">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Montage & dépôt des dossiers</h3>
+                        <p>Nous rédigeons l'intégralité des pièces administratives : formulaires, budgets prévisionnels,
+                            lettres de motivation, annexes. Les dossiers sont déposés sur les plateformes officielles
+                            (Le Compte Asso, portails régionaux) dans les délais.</p>
+                        <div class="step-tag">100% pris en charge par Dejavu Digital</div>
+                    </div>
+                </div>
+
+                <div class="step-card reveal delay-3" id="step-3">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Suivi jusqu'au versement</h3>
+                        <p>Nous assurons les allers-retours avec les administrations financières : relances, compléments
+                            de dossier, justificatifs. Notre mission ne s'arrête que lorsque le financement est
+                            effectivement versé sur votre compte.</p>
+                        <div class="step-tag">Vous êtes informé à chaque étape</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ TARIFS ═══════════════ -->
+    <section class="tarifs" id="tarifs">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Tarifs</span>
+                <h2>Un modèle aligné<br><span class="gradient-text">sur vos intérêts.</span></h2>
+                <p class="section-sub">Nous prenons le risque avec vous : notre rémunération dépend de la réussite de
+                    vos dossiers.</p>
+            </div>
+
+            <div class="pricing-wrapper reveal">
+                <div class="pricing-card" id="pricing-card">
+                    <div class="pricing-badge">Accompagnement intégral</div>
+
+                    <div class="pricing-hero-block">
+                        <div class="price-zero">0 €</div>
+                        <div class="price-label">de frais initiaux</div>
+                    </div>
+
+                    <div class="price-success">
+                        <span class="success-rate">15 %</span>
+                        <span class="success-label">HT sur les financements obtenus et versés</span>
+                    </div>
+
+                    <div class="pricing-divider"></div>
+
+                    <ul class="pricing-list">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Diagnostic complet de votre structure et de vos projets
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Cartographie personnalisée des aides accessibles
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Rédaction et dépôt des dossiers sur plateformes officielles
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Ingénierie budgétaire du projet de demande
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Suivi administratif jusqu'au versement effectif
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Aucun honoraire si le financement n'est pas accordé
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="btn btn-primary btn-full" id="pricing-cta">Réserver mon diagnostic
+                        gratuit</a>
+
+                    <p class="pricing-note">
+                        Nos honoraires sont facturés sur les fonds propres de votre structure (cotisations, recettes
+                        d'activité),
+                        conformément aux termes de notre contrat de prestation.
+                        <a href="#faq">En savoir plus →</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ENGAGEMENTS ═══════════════ -->
+    <section class="engagements" id="engagements">
+        <div class="container">
+            <div class="engagement-grid">
+                <div class="engagement-card reveal delay-1" id="engage-1">
+                    <div class="engage-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h4>Obligation de moyens</h4>
+                    <p>Nous mettons tout en œuvre pour maximiser vos chances. Aucune promesse de résultat — la décision
+                        finale appartient aux administrations.</p>
+                </div>
+                <div class="engagement-card reveal delay-2" id="engage-2">
+                    <div class="engage-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg>
+                    </div>
+                    <h4>Transparence contractuelle</h4>
+                    <p>Toutes nos conditions sont détaillées dans un contrat de prestation clair, contresigné avant
+                        toute intervention.</p>
+                </div>
+                <div class="engagement-card reveal delay-3" id="engage-3">
+                    <div class="engage-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <h4>Confidentialité & RGPD</h4>
+                    <p>Vos données comptables et administratives sont strictement confidentielles et utilisées dans le
+                        seul cadre de nos prestations.</p>
+                </div>
+                <div class="engagement-card reveal delay-4" id="engage-4">
+                    <div class="engage-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h4>Vous restez décisionnaire</h4>
+                    <p>Nous agissons en votre nom et pour votre compte, sur mandat explicite. Chaque dossier est validé
+                        par vos soins avant dépôt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FAQ ═══════════════ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Questions fréquentes</span>
+                <h2>Tout ce que vous devez<br><span class="gradient-text">savoir.</span></h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item reveal" id="faq-1">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Comment fonctionne votre rémunération ?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nous fonctionnons sur un modèle d'honoraires au résultat. Aucun frais n'est demandé à
+                            l'avance. Nos honoraires (15 % HT du montant obtenu) ne sont facturés que si le financement
+                            est effectivement accordé et versé sur votre compte bancaire. Ils sont réglés sur les fonds
+                            propres de votre structure (cotisations, recettes d'activité, mécénat), conformément aux
+                            termes du contrat de prestation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" id="faq-2">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Quelles subventions sont concernées ?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Notre accompagnement porte sur les financements publics : subventions communales,
+                            départementales, régionales, nationales (ANS, FDVA), appels à projets fédéraux, et
+                            dispositifs spécifiques (PSF, emploi sportif, équipement). Seuls les <strong>nouveaux
+                                financements obtenus grâce à notre intervention</strong> sont concernés. Les aides que
+                            vous perceviez déjà sont exclues, via un état des lieux contradictoire réalisé à la
+                            signature du contrat.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" id="faq-3">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Garantissez-vous l'obtention des subventions ?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Non. L'attribution d'une subvention relève d'une décision souveraine de l'administration.
+                            Notre prestation est soumise à une <strong>obligation de moyens</strong> : nous nous
+                            engageons à monter des dossiers complets, professionnels et déposés dans les délais, afin de
+                            maximiser vos chances. C'est d'ailleurs pour cela que notre rémunération est indexée sur le
+                            résultat — nous avons tout intérêt à la qualité de notre travail.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" id="faq-4">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Êtes-vous un cabinet d'avocats ou d'expertise-comptable ?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Non. Dejavu Digital est un cabinet de prestations de services administratifs spécialisé dans le montage de dossiers de subventions. Notre activité relève du conseil en gestion (SIC 70229 — Management Consultancy) et ne constitue ni du
+                            conseil juridique, ni de l'expertise comptable. Pour ces besoins spécifiques, nous vous
+                            orientons vers des professionnels réglementés.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" id="faq-5">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Comment se passe concrètement la collaboration ?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Après le diagnostic initial (gratuit, 15 min en visio), nous vous présentons les dispositifs
+                            identifiés et signons un contrat de prestation détaillé. Vous nous transmettez les documents
+                            nécessaires (statuts, bilans, projet associatif), et nous prenons en charge 100 % du montage
+                            administratif. Vous validez chaque dossier avant dépôt. Nous pouvons être désignés comme
+                            tiers-déclarant sur Le Compte Asso pour simplifier les démarches.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" id="faq-6">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Puis-je résilier à tout moment ?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Le contrat est conclu pour une durée d'un an (saison sportive). Il est résiliable par
+                            courrier recommandé avec un préavis de deux mois avant la date d'échéance annuelle. Les
+                            dossiers en cours au moment de la résiliation restent soumis aux conditions du contrat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CTA FINAL ═══════════════ -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <div class="cta-wrapper reveal">
+                <div class="cta-glow"></div>
+                <div class="cta-content">
+                    <h2>Prenons 15 minutes<br>pour <span class="gradient-text">évaluer vos droits.</span></h2>
+                    <p>Un diagnostic rapide et gratuit pour identifier les dispositifs de financement
+                        auxquels votre structure est éligible. Sans engagement.</p>
+
+                    <div class="cta-actions">
+                        <a href="#contact" class="btn btn-primary btn-lg" id="final-cta">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="4" width="18" height="16" rx="2" />
+                                <path d="m3 7 9 6 9-6" />
+                            </svg>
+                            Prendre rendez-vous
+                        </a>
+                    </div>
+
+                    <p class="cta-urgency">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                        Les campagnes FDVA et PSF ont des dates de clôture strictes. Anticipez vos démarches.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-mark">D</div>
+                        <span class="logo-text">Dejavu Digital</span>
+                    </a>
+                    <p>Cabinet de conseil en obtention de subventions.<br>Sport · Culture · Humanitaire · Social — Depuis 2024.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-col">
+                        <h5>Navigation</h5>
+                        <a href="#methode">Notre méthode</a>
+                        <a href="#tarifs">Tarifs</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Légal</h5>
+                        <a href="#mentions">Mentions légales</a>
+                        <a href="#cgv">Conditions générales</a>
+                        <a href="#rgpd">Politique de confidentialité</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Dejavu Digital — DEJAVU DIGITAL LTD — Company No. 14175430 — Registered in England & Wales</p>
+                <p class="footer-disclaimer">Dejavu Digital est un cabinet de prestations de services administratifs.
+                    Cette activité relève du conseil en gestion (SIC 70229) et ne constitue ni du conseil juridique, ni de l'expertise comptable,
+                    qui sont des professions réglementées. Notre prestation est soumise à une obligation de moyens.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
