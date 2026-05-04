@@ -261,6 +261,23 @@ section {
     color: var(--text-primary);
 }
 
+.logo-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    box-shadow: 
+        4px 4px 0 rgba(59, 130, 246, 0.18),
+        0 0 20px rgba(99, 102, 241, 0.15);
+    transition: all var(--transition-base);
+}
+
+.logo:hover .logo-img {
+    box-shadow: 
+        4px 4px 0 rgba(59, 130, 246, 0.28),
+        0 0 32px rgba(99, 102, 241, 0.35);
+    transform: translateY(-1px);
+}
+
 .logo-mark {
     width: 42px;
     height: 42px;
