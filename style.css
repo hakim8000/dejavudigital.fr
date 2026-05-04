@@ -1228,7 +1228,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    section { padding: 5rem 0; }
+    section { padding: 4rem 0; }
     
     .desktop-nav { display: none; }
     .btn-nav { display: none; }
@@ -1284,17 +1284,91 @@ footer {
     .price-zero {
         font-size: 3.5rem;
     }
+
+    /* ─── Mobile CTA: stack buttons, phone first ─── */
+    .cta-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+        min-height: 52px;
+        font-size: 1rem;
+    }
+
+    /* ─── Badge: smaller on mobile ─── */
+    .badge {
+        font-size: 0.68rem;
+        letter-spacing: 0.06em;
+        padding: 0.4rem 0.9rem;
+    }
+
+    /* ─── Rotating word: smaller min-width ─── */
+    .rotating-word {
+        min-width: 120px;
+    }
+
+    /* ─── Hero sub: tighter on mobile ─── */
+    .hero-sub {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* ─── Cards: less padding on mobile ─── */
+    .pain-card,
+    .result-card,
+    .testimonial-card,
+    .engagement-card {
+        padding: 1.5rem;
+    }
+
+    /* ─── Section headers: tighter ─── */
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
 }
 
 @media (max-width: 480px) {
     h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.6rem; }
     
     .hero-actions {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
     }
     
-    .btn-lg {
+    .hero-actions .btn-lg {
         width: 100%;
+        min-height: 52px;
+    }
+
+    .hero-hint {
+        text-align: center;
+    }
+
+    /* ─── Logo: slightly smaller on very small screens ─── */
+    .logo-text {
+        font-size: 1.05rem;
+    }
+
+    /* ─── Footer contact: prominent ─── */
+    .footer-contact {
+        font-size: 0.9rem !important;
+        margin-top: 1rem;
+    }
+
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    /* ─── CTA section: tighter padding ─── */
+    .cta-wrapper {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
     }
 }
+
