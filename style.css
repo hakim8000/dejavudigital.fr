@@ -543,9 +543,9 @@ section {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--accent-gold);
-    background: rgba(240, 180, 41, 0.08);
-    border: 1px solid rgba(240, 180, 41, 0.2);
+    color: var(--accent-blue-light);
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.25);
     padding: 0.45rem 1.1rem;
     border-radius: 50px;
     margin-bottom: 2rem;
