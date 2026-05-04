@@ -1566,7 +1566,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hero { padding-top: 6.5rem; }
+    .hero { padding-top: 8.5rem; }
     section { padding: 4rem 0; }
     
     .contact-separator { display: none; }
