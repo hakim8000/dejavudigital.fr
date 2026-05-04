@@ -317,6 +317,19 @@ section {
     border-radius: var(--radius-md);
 }
 
+.btn-outline {
+    background: transparent;
+    color: var(--accent-blue-light);
+    border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.btn-outline:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.6);
+    color: var(--accent-blue-light);
+    transform: translateY(-2px);
+}
+
 .btn-full { width: 100%; }
 
 /* ═══════════════════════
@@ -1144,6 +1157,62 @@ footer {
     margin: 0 auto;
     line-height: 1.6;
     opacity: 0.7;
+}
+
+/* ═══════════════════════
+   ROTATING WORD ANIMATION
+   ═══════════════════════ */
+.rotating-word {
+    display: inline-block;
+    position: relative;
+    min-width: 180px;
+    text-align: left;
+}
+
+.rotating-word.animate-out {
+    animation: wordOut 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.rotating-word.animate-in {
+    animation: wordIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes wordOut {
+    0% { opacity: 1; transform: translateY(0); filter: blur(0); }
+    100% { opacity: 0; transform: translateY(-16px); filter: blur(4px); }
+}
+
+@keyframes wordIn {
+    0% { opacity: 0; transform: translateY(16px); filter: blur(4px); }
+    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+/* ═══════════════════════
+   CTA CONTACT INFO
+   ═══════════════════════ */
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.cta-contact-info {
+    font-size: 0.88rem;
+    color: var(--text-tertiary);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+}
+
+.footer-contact {
+    margin-top: 0.75rem;
+    font-size: 0.85rem !important;
+    color: var(--text-secondary) !important;
+}
+
+.footer-contact a {
+    color: var(--accent-blue-light);
 }
 
 /* ═══════════════════════

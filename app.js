@@ -134,5 +134,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 ticking = true;
             }
         });
+    // ═══════════════════════════════════
+    // 7. ROTATING WORD IN HERO SLOGAN
+    // ═══════════════════════════════════
+    const rotatingWord = document.getElementById('rotating-word');
+    const words = ['obtient', 'détecte', 'décroche', 'sécurise', 'négocie'];
+    let wordIndex = 0;
+
+    if (rotatingWord) {
+        setInterval(() => {
+            wordIndex = (wordIndex + 1) % words.length;
+            
+            // Animate out
+            rotatingWord.classList.add('animate-out');
+            
+            setTimeout(() => {
+                rotatingWord.textContent = words[wordIndex];
+                rotatingWord.classList.remove('animate-out');
+                rotatingWord.classList.add('animate-in');
+                
+                setTimeout(() => {
+                    rotatingWord.classList.remove('animate-in');
+                }, 350);
+            }, 350);
+        }, 2500);
     }
 });
