@@ -1305,13 +1305,11 @@ footer {
     display: inline-grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    height: 1.15em;
-    vertical-align: bottom;
+    vertical-align: baseline;
     overflow: hidden;
     position: relative;
-    width: 200px;
     text-align: left;
-    margin-left: -5px;
+    margin-left: 0.1em;
 }
 
 .carousel-word {
@@ -1320,6 +1318,8 @@ footer {
     transform: translateY(100%);
     opacity: 0;
     font-weight: 800;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
 }
 
 .carousel-word:nth-child(1) { animation-delay: 0s; }
