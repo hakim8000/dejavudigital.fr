@@ -134,6 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ticking = true;
             }
         });
+    }
+
     // ═══════════════════════════════════
     // 7. ROTATING WORD IN HERO SLOGAN
     // ═══════════════════════════════════
@@ -145,7 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(() => {
             wordIndex = (wordIndex + 1) % words.length;
             
-            // Animate out
             rotatingWord.classList.add('animate-out');
             
             setTimeout(() => {
@@ -155,8 +156,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 setTimeout(() => {
                     rotatingWord.classList.remove('animate-in');
-                }, 350);
-            }, 350);
+                }, 300);
+            }, 300);
         }, 2500);
     }
 });
