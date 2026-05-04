@@ -1245,10 +1245,16 @@ footer {
 /* ═══════════════════════
    ROTATING WORD ANIMATION
    ═══════════════════════ */
+.rotating-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    height: 1.15em;
+    vertical-align: bottom;
+    position: relative;
+}
+
 .rotating-word {
     display: inline-block;
-    position: relative;
-    vertical-align: bottom;
 }
 
 .rotating-word.animate-out {
@@ -1256,7 +1262,7 @@ footer {
 }
 
 .rotating-word.animate-in {
-    animation: wordIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: wordIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes wordOut {
