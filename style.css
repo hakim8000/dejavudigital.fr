@@ -185,26 +185,57 @@ section {
 }
 
 .logo-mark {
-    width: 36px;
-    height: 36px;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-sm);
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #4f8ef7 0%, #7c6cf0 100%);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: white;
     position: relative;
+    box-shadow: 
+        5px 5px 0 rgba(59, 130, 246, 0.18),
+        0 0 24px rgba(99, 102, 241, 0.15);
+    transition: all var(--transition-base);
+}
+
+.logo:hover .logo-mark {
+    box-shadow: 
+        5px 5px 0 rgba(59, 130, 246, 0.28),
+        0 0 36px rgba(99, 102, 241, 0.35);
+    transform: translateY(-1px);
+}
+
+.logo-mark::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255,255,255,0.18), transparent 60%);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .logo-mark::after {
     content: '';
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
     border-radius: inherit;
-    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 60%);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+    animation: logoShimmer 4s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes logoShimmer {
+    0%, 100% { left: -100%; }
+    50% { left: 100%; }
 }
 
 .logo-text {
@@ -292,12 +323,35 @@ section {
     background: var(--gradient-primary);
     color: white;
     box-shadow: 0 4px 20px rgba(59, 130, 246, 0.25);
+    animation: btnPulse 3s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::after {
+    left: 100%;
 }
 
 .btn-primary:hover {
-    box-shadow: 0 6px 30px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 6px 30px rgba(59, 130, 246, 0.5);
     transform: translateY(-2px);
     color: white;
+}
+
+@keyframes btnPulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(59, 130, 246, 0.25); }
+    50% { box-shadow: 0 6px 28px rgba(99, 102, 241, 0.4); }
 }
 
 .btn-nav {
@@ -364,6 +418,7 @@ section {
     top: -250px;
     right: -200px;
     background: var(--accent-indigo);
+    animation: orbDrift1 18s ease-in-out infinite;
 }
 
 .orb-2 {
@@ -373,6 +428,19 @@ section {
     left: -150px;
     background: var(--accent-blue);
     opacity: 0.15;
+    animation: orbDrift2 22s ease-in-out infinite;
+}
+
+@keyframes orbDrift1 {
+    0%, 100% { transform: translate(0, 0); opacity: 0.25; }
+    33% { transform: translate(-40px, 25px); opacity: 0.35; }
+    66% { transform: translate(25px, -15px); opacity: 0.2; }
+}
+
+@keyframes orbDrift2 {
+    0%, 100% { transform: translate(0, 0); opacity: 0.15; }
+    33% { transform: translate(35px, -25px); opacity: 0.25; }
+    66% { transform: translate(-20px, 15px); opacity: 0.1; }
 }
 
 .grid-pattern {
@@ -479,7 +547,9 @@ section {
 }
 
 .pain-card {
-    background: var(--bg-card);
+    background: rgba(14, 20, 40, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     padding: 2rem;
@@ -495,15 +565,16 @@ section {
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--gradient-primary);
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-indigo), #a78bfa);
     opacity: 0;
     transition: opacity var(--transition-base);
 }
 
 .pain-card:hover {
-    background: var(--bg-card-hover);
-    border-color: var(--border-hover);
-    transform: translateY(-4px);
+    background: rgba(20, 28, 55, 0.6);
+    border-color: rgba(99, 102, 241, 0.25);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.1);
 }
 
 .pain-card:hover::before { opacity: 1; }
@@ -545,7 +616,9 @@ section {
 }
 
 .result-card {
-    background: var(--bg-card);
+    background: rgba(14, 20, 40, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     padding: 2rem;
@@ -559,14 +632,15 @@ section {
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 3px;
-    background: var(--gradient-primary);
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-indigo), #a78bfa);
     opacity: 0;
     transition: opacity var(--transition-base);
 }
 
 .result-card:hover {
-    border-color: var(--border-hover);
-    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.12), 0 0 0 1px rgba(99, 102, 241, 0.15);
 }
 
 .result-card:hover::before { opacity: 1; }
@@ -641,7 +715,9 @@ section {
 }
 
 .testimonial-card {
-    background: var(--bg-card);
+    background: rgba(14, 20, 40, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     padding: 2rem;
@@ -651,8 +727,9 @@ section {
 }
 
 .testimonial-card:hover {
-    border-color: var(--border-hover);
-    transform: translateY(-3px);
+    border-color: rgba(99, 102, 241, 0.25);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.1);
 }
 
 .testimonial-quote {
@@ -1165,12 +1242,11 @@ footer {
 .rotating-word {
     display: inline-block;
     position: relative;
-    min-width: 180px;
-    text-align: left;
+    vertical-align: bottom;
 }
 
 .rotating-word.animate-out {
-    animation: wordOut 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: wordOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .rotating-word.animate-in {
