@@ -91,6 +91,19 @@ a:hover { color: var(--accent-blue); }
     background-clip: text;
 }
 
+.animated-gradient-text {
+    background: linear-gradient(to right, #4f8ef7, #7c6cf0, #a78bfa, #4f8ef7);
+    background-size: 300% auto;
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShine 6s linear infinite;
+}
+
+@keyframes textShine {
+    to { background-position: 300% center; }
+}
+
 /* ─── Layout ─── */
 .container {
     max-width: 1140px;
@@ -154,11 +167,53 @@ section {
 .delay-4 { transition-delay: 0.32s; }
 
 /* ═══════════════════════
+   TOP BAR
+   ═══════════════════════ */
+.top-bar {
+    background: rgba(14, 20, 40, 0.95);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    font-size: 0.85rem;
+    height: 38px;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.top-bar-link {
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color var(--transition-fast);
+}
+
+.top-bar-link:hover {
+    color: var(--accent-blue-light);
+}
+
+@media (max-width: 768px) {
+    .top-bar-content {
+        justify-content: center;
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* ═══════════════════════
    NAVBAR
    ═══════════════════════ */
 .navbar {
     position: fixed;
-    top: 0;
+    top: 38px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -174,6 +229,7 @@ section {
     background: rgba(6, 8, 15, 0.92);
     border-bottom-color: var(--border-subtle);
     padding: 0.7rem 0;
+    top: 0;
 }
 
 .nav-content {
@@ -399,7 +455,7 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 10rem;
     position: relative;
     overflow: hidden;
 }
@@ -1243,30 +1299,39 @@ footer {
 }
 
 /* ═══════════════════════
-   ROTATING WORD ANIMATION
+   ROTATING WORD CAROUSEL (CSS ONLY)
    ═══════════════════════ */
-.rotating-word {
-    display: inline-block;
-    position: relative;
+.word-carousel {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 1.15em;
     vertical-align: bottom;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+    text-align: left;
+    margin-left: -5px;
 }
 
-.rotating-word.animate-out {
-    animation: wordOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+.carousel-word {
+    grid-area: 1 / 1;
+    animation: spinWords 12.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    transform: translateY(100%);
+    opacity: 0;
+    font-weight: 800;
 }
 
-.rotating-word.animate-in {
-    animation: wordIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
+.carousel-word:nth-child(1) { animation-delay: 0s; }
+.carousel-word:nth-child(2) { animation-delay: 2.5s; }
+.carousel-word:nth-child(3) { animation-delay: 5s; }
+.carousel-word:nth-child(4) { animation-delay: 7.5s; }
+.carousel-word:nth-child(5) { animation-delay: 10s; }
 
-@keyframes wordOut {
-    0% { opacity: 1; transform: translateY(0); filter: blur(0); }
-    100% { opacity: 0; transform: translateY(-16px); filter: blur(4px); }
-}
-
-@keyframes wordIn {
-    0% { opacity: 0; transform: translateY(16px); filter: blur(4px); }
-    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+@keyframes spinWords {
+    0%, 2% { transform: translateY(100%); opacity: 0; }
+    4%, 18% { transform: translateY(0); opacity: 1; }
+    20%, 100% { transform: translateY(-100%); opacity: 0; }
 }
 
 /* ═══════════════════════
