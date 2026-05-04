@@ -989,6 +989,15 @@ section {
     background: rgba(59, 130, 246, 0.08);
 }
 
+.initials-avatar {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-indigo) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
 .testimonial-author strong {
     display: block;
     font-size: 0.88rem;
@@ -1510,10 +1519,30 @@ footer {
     margin-top: 0.75rem;
     font-size: 0.85rem !important;
     color: var(--text-secondary) !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
-.footer-contact a {
-    color: var(--accent-blue-light);
+.footer-contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+}
+.footer-contact-link:hover { color: var(--accent-blue-light); }
+.footer-contact-link svg { color: var(--accent-blue-light); opacity: 0.7; }
+
+.footer-dot { color: var(--text-tertiary); }
+
+.footer-trust {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.3px;
+    font-weight: 500;
 }
 
 /* ═══════════════════════
