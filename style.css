@@ -718,7 +718,6 @@ section {
     }
 
     .sticky-cta.visible {
-        display: block;
         transform: translateY(0);
     }
 
@@ -959,7 +958,7 @@ section {
 
 .testimonial-quote {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
