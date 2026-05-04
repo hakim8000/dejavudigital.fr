@@ -1245,16 +1245,10 @@ footer {
 /* ═══════════════════════
    ROTATING WORD ANIMATION
    ═══════════════════════ */
-.rotating-wrapper {
-    display: inline-block;
-    overflow: hidden;
-    height: 1.15em;
-    vertical-align: bottom;
-    position: relative;
-}
-
 .rotating-word {
     display: inline-block;
+    position: relative;
+    vertical-align: bottom;
 }
 
 .rotating-word.animate-out {
