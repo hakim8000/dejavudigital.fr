@@ -147,17 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(() => {
             wordIndex = (wordIndex + 1) % words.length;
             
-            rotatingWord.classList.add('animate-out');
+            rotatingWord.classList.remove('word-fade-in');
+            rotatingWord.classList.add('word-fade-out');
             
             setTimeout(() => {
                 rotatingWord.textContent = words[wordIndex];
-                rotatingWord.classList.remove('animate-out');
-                rotatingWord.classList.add('animate-in');
-                
-                setTimeout(() => {
-                    rotatingWord.classList.remove('animate-in');
-                }, 300);
-            }, 300);
-        }, 2500);
+                rotatingWord.classList.remove('word-fade-out');
+                rotatingWord.classList.add('word-fade-in');
+            }, 300); // Wait for fade-out to finish before changing text
+        }, 3500); // Slowed down from 2500ms to 3500ms for better readability
     }
 });

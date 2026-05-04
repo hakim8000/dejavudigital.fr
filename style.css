@@ -170,34 +170,49 @@ section {
    TOP BAR
    ═══════════════════════ */
 .top-bar {
-    background: rgba(14, 20, 40, 0.95);
-    border-bottom: 1px solid var(--border-subtle);
-    padding: 0.5rem 0;
+    background: rgba(10, 15, 30, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.6rem 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1001;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     height: 38px;
+    font-weight: 500;
 }
 
 .top-bar-content {
     display: flex;
     justify-content: flex-end;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .top-bar-link {
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.6);
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    transition: color var(--transition-fast);
+    gap: 0.5rem;
+    transition: all var(--transition-fast);
+    letter-spacing: 0.3px;
+}
+
+.top-bar-link svg {
+    color: var(--accent-blue-light);
+    opacity: 0.8;
 }
 
 .top-bar-link:hover {
-    color: var(--accent-blue-light);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.top-bar-link:hover svg {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px var(--accent-blue));
 }
 
 @media (max-width: 768px) {
@@ -1299,39 +1314,22 @@ footer {
 }
 
 /* ═══════════════════════
-   ROTATING WORD CAROUSEL (CSS ONLY)
+   ROTATING WORD ANIMATION (JS CONTROLLED)
    ═══════════════════════ */
-.word-carousel {
-    display: inline-grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    vertical-align: baseline;
-    overflow: hidden;
-    position: relative;
-    text-align: left;
-    margin-left: 0.1em;
+.word-fade-out {
+    animation: fadeOutUp 0.3s forwards;
+}
+.word-fade-in {
+    animation: fadeInUp 0.3s forwards;
 }
 
-.carousel-word {
-    grid-area: 1 / 1;
-    animation: spinWords 12.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-    transform: translateY(100%);
-    opacity: 0;
-    font-weight: 800;
-    padding-right: 0.05em;
-    padding-bottom: 0.1em;
+@keyframes fadeOutUp {
+    0% { opacity: 1; transform: translateY(0); filter: blur(0); }
+    100% { opacity: 0; transform: translateY(-10px); filter: blur(4px); }
 }
-
-.carousel-word:nth-child(1) { animation-delay: 0s; }
-.carousel-word:nth-child(2) { animation-delay: 2.5s; }
-.carousel-word:nth-child(3) { animation-delay: 5s; }
-.carousel-word:nth-child(4) { animation-delay: 7.5s; }
-.carousel-word:nth-child(5) { animation-delay: 10s; }
-
-@keyframes spinWords {
-    0%, 2% { transform: translateY(100%); opacity: 0; }
-    4%, 18% { transform: translateY(0); opacity: 1; }
-    20%, 100% { transform: translateY(-100%); opacity: 0; }
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(10px); filter: blur(4px); }
+    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
 
 /* ═══════════════════════
