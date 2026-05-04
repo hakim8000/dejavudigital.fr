@@ -154,7 +154,62 @@ document.addEventListener('DOMContentLoaded', () => {
                 rotatingWord.textContent = words[wordIndex];
                 rotatingWord.classList.remove('word-fade-out');
                 rotatingWord.classList.add('word-fade-in');
-            }, 300); // Wait for fade-out to finish before changing text
-        }, 3500); // Slowed down from 2500ms to 3500ms for better readability
+            }, 300);
+        }, 3500);
+    }
+
+    // ═══════════════════════════════════
+    // 8. STICKY MOBILE CTA
+    // ═══════════════════════════════════
+    const stickyCta = document.getElementById('sticky-cta');
+    const heroSection = document.querySelector('.hero');
+
+    if (stickyCta && heroSection && window.innerWidth <= 768) {
+        // Initially show as block but off-screen (translateY 100%)
+        stickyCta.style.display = 'block';
+        
+        const stickyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    stickyCta.classList.add('visible');
+                } else {
+                    stickyCta.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        stickyObserver.observe(heroSection);
+    }
+
+    // ═══════════════════════════════════
+    // 9. SPOTLIGHT CARD EFFECT (DESKTOP)
+    // ═══════════════════════════════════
+    if (window.innerWidth > 768) {
+        const spotlightCards = document.querySelectorAll(
+            '.pain-card, .result-card, .testimonial-card, .step-card, .engagement-card'
+        );
+
+        spotlightCards.forEach(card => {
+            card.classList.add('spotlight-card');
+            
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--spotlight-x', x + 'px');
+                card.style.setProperty('--spotlight-y', y + 'px');
+            });
+        });
+
+        // Update the pseudo-element position via CSS custom properties
+        const spotlightStyle = document.createElement('style');
+        spotlightStyle.textContent = `
+            .spotlight-card::before {
+                left: var(--spotlight-x, 50%);
+                top: var(--spotlight-y, 50%);
+            }
+        `;
+        document.head.appendChild(spotlightStyle);
     }
 });
+

@@ -611,6 +611,146 @@ section {
 }
 
 /* ═══════════════════════
+   TRUST MARQUEE
+   ═══════════════════════ */
+.trust-marquee {
+    background: rgba(10, 15, 30, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 1rem 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.trust-marquee::before,
+.trust-marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+}
+.trust-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+.trust-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+
+.trust-track {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    white-space: nowrap;
+    animation: marqueeScroll 35s linear infinite;
+    width: max-content;
+}
+
+.trust-item {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.trust-dot {
+    color: rgba(99, 102, 241, 0.4);
+    font-size: 0.45rem;
+}
+
+@keyframes marqueeScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* ═══════════════════════
+   SPOTLIGHT CARD EFFECT
+   ═══════════════════════ */
+.spotlight-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight-card::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.spotlight-card:hover::before {
+    opacity: 1;
+}
+
+/* ═══════════════════════
+   STICKY MOBILE CTA
+   ═══════════════════════ */
+.sticky-cta {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        padding: 0.75rem 1rem;
+        padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+        background: rgba(6, 8, 15, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(99, 102, 241, 0.2);
+        transform: translateY(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sticky-cta.visible {
+        display: block;
+        transform: translateY(0);
+    }
+
+    .sticky-cta-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        width: 100%;
+        padding: 0.9rem 1.5rem;
+        background: var(--gradient-primary);
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.95rem;
+        border-radius: var(--radius-md);
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+        transition: all var(--transition-fast);
+    }
+
+    .sticky-cta-btn:hover {
+        color: #fff;
+        box-shadow: 0 6px 30px rgba(59, 130, 246, 0.5);
+    }
+
+    /* Prevent sticky CTA from covering footer */
+    footer {
+        padding-bottom: 5rem;
+    }
+}
+
+/* ═══════════════════════
    CONSTAT
    ═══════════════════════ */
 .constat {
