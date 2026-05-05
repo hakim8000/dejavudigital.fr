@@ -478,6 +478,19 @@ section {
     transform: translateY(-2px);
 }
 
+.btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+    border: 1px solid #25D366;
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe5d;
+    border-color: #1ebe5d;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
 .btn-full { width: 100%; }
 
 /* ═══════════════════════
